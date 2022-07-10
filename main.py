@@ -349,9 +349,9 @@ class main:
                 author = self.value[2]
                 publisher = self.value[3]
                 msg_body = f"""Hello {name}!\nYour book, {booktitle}, has been Issued\nBook Details\nID: {bookid}\nBook Title: {booktitle}\nBook Author: {author}\nPublisher: {publisher}\n\nHappy Reading!"""
-                sender_email = "com.amanpal@gmail.com"
+                sender_email = "YOUREMAIL@gmail.com"
                 receiver_email = reciever
-                password = 'euhvogkffgvticqb'
+                password = 'YOUR APP PASSWORD'
                 message = MIMEMultipart("alternative")
                 message["Subject"] = "LIPS Library Management System"
                 message["From"] = sender_email
