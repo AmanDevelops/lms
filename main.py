@@ -759,7 +759,7 @@ class main:
         db.commit()
         self.data = cursor.fetchone()
         if self.data != None:
-            password = 'euhvogkffgvticqb'
+            password = 'YOUR APP PASSWORD'
             message = MIMEMultipart("alternative")
             message["Subject"] = "LIPS Library Management System"
             message["From"] = "com.amanpal@gmail.com"
@@ -769,8 +769,8 @@ class main:
             message.attach(MIMEText(text, "plain"))
             context = ssl.create_default_context()
             with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-                server.login('com.amanpal@gmail.com', password)
-                server.sendmail('com.amanpal@gmail.com', self.data[2], message.as_string())
+                server.login('YOUREMAIL@gmail.com', password)
+                server.sendmail('YOUREMAIL@gmail.com', self.data[2], message.as_string())
             self.enterotp = Label(self.rog, text='Enter OTP', bg='#d39c86', fg='#223c83',font=("Times New Roman", 14, 'bold'))
             self.enterotp.place(x=40, y=130)
             self.otpent = Entry(self.rog, width=16, font=('Georgia', 14, 'bold'))
